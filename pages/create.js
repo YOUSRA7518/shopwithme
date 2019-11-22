@@ -84,7 +84,7 @@ function CreateProduct() {
     <>
       <Header as="h2" block>
         <Icon name="add" color="red" />
-        Create New Product
+        Créer un nouveau produit
       </Header>
       <Form
         loading={loading}
@@ -95,28 +95,28 @@ function CreateProduct() {
         <Message
           error
           header="Oops!"
-          content="Product missing one or more fields"
+          content="Produit manquant un ou plusieurs champs"
         />
         <Message
           success
           icon="check"
           header="Sucess!"
-          content="Your product has been posted"
+          content="Votre produit a été posté"
         />
         <Form.Group widths="equal">
           <Form.Field
             control={Input}
             name="name"
             label="Name"
-            placeholder="Name"
+            placeholder="Nom"
             value={product.name}
             onChange={handleChange}
           />
           <Form.Field
             control={Input}
             name="price"
-            label="Price"
-            placeholder="Price"
+            label="price"
+            placeholder="Prix"
             min="0.00"
             step="0.01"
             type="number"
@@ -129,7 +129,7 @@ function CreateProduct() {
             type="file"
             label="Media"
             accept="image/*"
-            content="Select Image"
+            content="Sélectionner une image"
             onChange={handleChange}
           />
         </Form.Group>
@@ -147,7 +147,7 @@ function CreateProduct() {
           disabled={disabled || loading}
           color="red"
           icon="pencil alternate"
-          content="Submit"
+          content="Soumettre"
           type="Submit"
         />
       </Form>

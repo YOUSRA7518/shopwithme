@@ -11,7 +11,7 @@ const ProductSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  sku: {
+  ref: {
     type: String,
     unique: true,
     default: shortid.generate()

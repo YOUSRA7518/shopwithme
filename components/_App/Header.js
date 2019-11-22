@@ -32,7 +32,7 @@ function Header({ user }) {
         <Link href="/cart">
           <Menu.Item header active={isActive("/cart")}>
             <Icon name="cart" size="large" color="red" />
-            Cart
+            Panier
           </Menu.Item>
         </Link>
 
@@ -40,7 +40,7 @@ function Header({ user }) {
           <Link href="/create">
             <Menu.Item header active={isActive("/create")}>
               <Icon name="add square" size="large" color="red" />
-              Create
+              Vender vos articles
             </Menu.Item>
           </Link>
         )}
@@ -50,13 +50,12 @@ function Header({ user }) {
             <Link href="/account">
               <Menu.Item header active={isActive("/account")}>
                 <Icon name="user" size="large" color="red" />
-                Account
+                Mon compte
               </Menu.Item>
             </Link>
 
             <Menu.Item onClick={handleLogout} header>
               <Icon name="sign out" size="large" color="red" />
-              Logout
             </Menu.Item>
           </>
         ) : (
@@ -64,14 +63,14 @@ function Header({ user }) {
             <Link href="/login">
               <Menu.Item header active={isActive("/login")}>
                 <Icon name="sign in" size="large" color="red" />
-                Login
+                Se connecter
               </Menu.Item>
             </Link>
 
             <Link href="/signup ">
               <Menu.Item header active={isActive("/signup")}>
                 <Icon name="signup" size="large" color="red" />
-                Signup
+                Créer un compte
               </Menu.Item>
             </Link>
           </>

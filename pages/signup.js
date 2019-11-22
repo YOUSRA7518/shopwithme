@@ -47,11 +47,11 @@ function Signup() {
         attached
         icon="settings"
         header="Get Started!"
-        content="Create a new account"
+        content="Créer un nouveau compte"
         color="green"
       />
       <Form error={Boolean(error)} loading={loading} onSubmit={handleSubmit}>
-        <Message content={error.response} error header="Oops!" />
+        <Message content={error.response} header="Oops!" />
 
         <Segment>
           <Form.Input
@@ -59,7 +59,7 @@ function Signup() {
             icon="user"
             iconPosition="left"
             label="Name"
-            placholder="Name"
+            placholder="Nom"
             name="name"
             value={user.name}
             onChange={handleChange}
@@ -80,7 +80,7 @@ function Signup() {
             icon="lock"
             iconPosition="left"
             label="Password"
-            placholder="Password"
+            placholder="Mot de Passe"
             name="password"
             type="password"
             value={user.password}
@@ -91,17 +91,17 @@ function Signup() {
             icon="signup"
             type="submit"
             color="red"
-            content="signup"
+            content="s'inscrire"
           />
         </Segment>
       </Form>
       <Message attached="bottom" warning>
         <Icon name="help" />
-        Existing user ?
+        Utilisateur existant ?
         <Link href="/login">
-          <a>Log in here </a>
+          <a>Connectez-vous ici </a>
         </Link>{" "}
-        instead.
+        au lieu.
       </Message>
     </>
   );

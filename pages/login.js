@@ -50,12 +50,12 @@ function Signup() {
       <Message
         attached
         icon="privacy"
-        header="Welcome Back!"
-        content="Log in with email and password"
+        header="De Retour!"
+        content="Se connecter avec email et mot de passe"
         color="blue"
       />
       <Form error={Boolean(error)} loading={loading} onSubmit={handleSubmit}>
-        <Message content={error.response} error header="Oops!" />
+        <Message content={error} error header="Oops!" />
 
         <Segment>
           <Form.Input
@@ -74,7 +74,7 @@ function Signup() {
             icon="lock"
             iconPosition="left"
             label="Password"
-            placeholder="Password"
+            placeholder="Mot de Passe"
             name="password"
             type="password"
             value={user.password}
@@ -85,17 +85,17 @@ function Signup() {
             icon="sign in"
             type="submit"
             color="orange"
-            content="Login"
+            content="S'identifier"
           />
         </Segment>
       </Form>
       <Message attached="bottom" warning>
         <Icon name="help" />
-        New user?{" "}
+        Nouvel utilisateur?{" "}
         <Link href="/signup">
-          <a>Sign up here</a>
+          <a>Inscrivez-vous ici</a>
         </Link>{" "}
-        instead.
+        au lieu.
       </Message>
     </>
   );

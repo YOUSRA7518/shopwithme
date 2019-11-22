@@ -19,7 +19,8 @@ function CartSummary({ products, handleCheckout, success }) {
     <>
       <Divider />
       <Segment clearing size="large">
-        <strong> Sub total :</strong> ${cartAmount}
+        <strong>Sous total: </strong>
+        {cartAmount}€
         <StripeCheckout
           name="ShopWithMe"
           amount={stripeAmount}

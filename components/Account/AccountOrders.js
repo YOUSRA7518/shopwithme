@@ -24,7 +24,7 @@ function AccountOrders({ orders }) {
         content: (
           <>
             <List.Header as="h3">
-              Total: ${order.total}
+              Total: {order.total}€
               <Label
                 content={order.email}
                 icon="mail"
@@ -45,7 +45,7 @@ function AccountOrders({ orders }) {
                   </List.Content>
                   <List.Content floated="right ">
                     <Label tag color="grey" size="tiny">
-                      {p.product.sku}
+                      {p.product.reference}
                     </Label>
                   </List.Content>
                 </List.Item>
@@ -61,17 +61,17 @@ function AccountOrders({ orders }) {
     <>
       <Header as="h2" icon>
         <Icon name="folder open" />
-        Order History
+        Historique des commandes
       </Header>
       {orders.length === 0 ? (
         <Segment inverted tertiary color="red" textAlign="center">
           <Header icon>
             <Icon name="copy outline" />
-            No past orders.
+            Aucune commande passée.
           </Header>
           <div>
             <Button onClick={() => router.push("/")} color="orange">
-              View Products
+              Voir les produits
             </Button>
           </div>
         </Segment>
